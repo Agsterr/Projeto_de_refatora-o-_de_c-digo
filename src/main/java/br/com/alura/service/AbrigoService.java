@@ -3,8 +3,6 @@ package br.com.alura.service;
 import br.com.alura.client.ClientHttpConfiguration;
 import br.com.alura.domain.Abrigo;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
 import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.Arrays;
@@ -68,15 +66,23 @@ public class AbrigoService {
     Abrigo[] abrigos = new ObjectMapper().readValue( responseBody, Abrigo[].class);
 
        List<Abrigo> abrigoList = Arrays.stream(abrigos).toList();
+
+       if (abrigoList.isEmpty()){
+
+           System.out.println("Não ha abrigos cadastrados");
+       }else {
+         mostrarAbrigos(abrigoList);
+
+
+       }
+    }
+
+    private void mostrarAbrigos(List<Abrigo>abrigos){
         System.out.println("Abrigos cadastrados:");
-        for (Abrigo  abrigo :abrigoList) {
+        for (Abrigo abrigo : abrigos) {
             Long id = abrigo.getId();
             String nome = abrigo.getNome();
             System.out.println(id + " - " + nome);
         }
-
-
-
-
     }
 }

@@ -2,20 +2,19 @@ package br.com.alura.domain;
 
 public class Pet {
 
-      private Long id ;
-      private String tipo;
-      private String nome;
-      private String    raca;
-      private  int  idade;
-      private   String  cor;
-      private   Float  peso;
+    private Long id;
+    private String tipo;
+    private String nome;
+    private String raca;
+    private int idade;
+    private String cor;
+    private Float peso;
 
 
+    private Pet() {
+    }
 
-
-       private Pet(){};
-
-    public Pet(String tipo, String nome, String raca, int idade, String cor, Float peso) {
+    public Pet( String tipo, String nome, String raca, int idade, String cor, Float peso) {
         this.tipo = tipo;
         this.nome = nome;
         this.raca = raca;
@@ -56,11 +55,11 @@ public class Pet {
         this.raca = raca;
     }
 
-    public Integer getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 

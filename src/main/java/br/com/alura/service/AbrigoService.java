@@ -14,9 +14,14 @@ public class AbrigoService {
 
    private ClientHttpConfiguration client;
 
+   Scanner scanner = new Scanner(System.in);
+
 
     //Instancias
 
+
+    public AbrigoService() {
+    }
 
     public AbrigoService(ClientHttpConfiguration client) {
         this.client = client;
@@ -27,11 +32,13 @@ public class AbrigoService {
     public void cadastrarAbrigos() throws IOException, InterruptedException {
 
         System.out.println("Digite o nome do abrigo:");
-        String nome = new Scanner(System.in).nextLine();
+        String nome = scanner.nextLine();
         System.out.println("Digite o telefone do abrigo:");
-        String telefone = new Scanner(System.in).nextLine();
+        String telefone = scanner.nextLine();
         System.out.println("Digite o email do abrigo:");
-        String email = new Scanner(System.in).nextLine();
+        String email = scanner.nextLine();
+
+
 
         Abrigo  abrigo = new Abrigo(nome,email,telefone);
 

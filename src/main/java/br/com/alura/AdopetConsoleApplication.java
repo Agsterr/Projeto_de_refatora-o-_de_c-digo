@@ -1,15 +1,15 @@
 package br.com.alura;
 
-import br.com.alura.controller.Controller;
+import br.com.alura.principal.Principal;
 
 
 public class AdopetConsoleApplication {
 
     public static void main(String[] args) {
 
-        Controller controller = new Controller();
+        Principal principal = new Principal();
 
-        controller.menuPrincipal();
+        principal.menuPrincipal();
 
 
     }

@@ -1,4 +1,4 @@
-package br.com.alura.controller;
+package br.com.alura.principal;
 
 import br.com.alura.client.ClientHttpConfiguration;
 import br.com.alura.service.AbrigoService;
@@ -6,7 +6,7 @@ import br.com.alura.service.PetService;
 
 import java.util.Scanner;
 
-public class Controller {
+public class Principal {
 
     ClientHttpConfiguration client = new ClientHttpConfiguration();
     AbrigoService abrigoService = new AbrigoService(client);
